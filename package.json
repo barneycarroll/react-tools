@@ -1,0 +1,25 @@
+{
+    "name": "webpack-react-babel-minreq",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "dependencies": {
+        "react": "^15.6.1",
+        "react-dom": "^15.6.1"
+    },
+    "devDependencies": {
+        "babel-core": "^6.25.0",
+        "babel-loader": "^7.1.1",
+        "babel-preset-env": "^1.6.0",
+        "babel-preset-react": "^6.24.1",
+        "jest": "^20.0.4",
+        "webpack": "^3.4.1",
+        "webpack-dev-server": "^2.6.1",
+        "webpack-merge": "^4.1.0"
+    },
+    "scripts": {
+        "start": "NODE_ENV=development webpack-dev-server --open --config webpack/webpack.dev.config.js",
+        "build": "NODE_ENV=production webpack -p --config webpack/webpack.prod.config.js",
+        "test": "jest --watch"
+    }
+}
