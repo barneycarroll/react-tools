@@ -2,13 +2,16 @@
 // B A S E    C O N F I G
 // ==============================================
 //
+const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
+    context: path.join(__dirname, '../', 'src'),
+
     entry: {
-        toolOne: './src/ToolOne/index.js',
-        toolTwo: './src/ToolTwo/index.js',
-        toolThree: './src/ToolThree/index.js'
+        toolOne: './ToolOne/index.js',
+        toolTwo: './ToolTwo/index.js',
+        toolThree: './ToolThree/index.js'
     },
 
     module: {
