@@ -6,7 +6,9 @@ const webpack = require('webpack');
 
 module.exports = {
     entry: {
-        app: './src/App.js'
+        toolOne: './src/ToolOne/index.js',
+        toolTwo: './src/ToolTwo/index.js',
+        toolThree: './src/ToolThree/index.js'
     },
 
     module: {

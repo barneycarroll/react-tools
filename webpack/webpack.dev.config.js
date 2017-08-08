@@ -8,7 +8,7 @@ const baseConfig = require('./webpack.base.config.js');
 
 module.exports = merge(baseConfig, {
     devServer: {
-        contentBase: path.join(__dirname, '../', 'public'),
-        port: 3000,
+        contentBase: path.resolve(__dirname, 'src'),
+        port: 9000,
     }
 });

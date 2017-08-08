@@ -21,7 +21,7 @@ let timestamp = [
 
 module.exports = merge(baseConfig, {
     output: {
-        path: path.resolve(__dirname, '../', 'build'),
-        filename: `bundle.${timestamp}.js`
+        filename: `[name].${timestamp}.js`,
+        path: path.resolve(__dirname, '../', 'build')
     }
 });
