@@ -20,13 +20,18 @@ const config = {
   watch     : { chokidar : true }
 }
 
-const tools = fs.readdirSync('./src/').filter(item =>
-  fs.readdirSync()
-)
+const tools = fs.readdirSync('./src/').filter(dir => {
+  try {
+    return fs.readdirSync( './src/' + dir ).includes('index.jsx')
+  }
+  catch (e){
+    return false
+  }
+})
 
-export default tools.map(toolPath => ({
-  ...config, {
-    entry : './src/' + toolPath + '/index.jsx',
-    dest  : './server/' + toolPath + '/index.js'
-  }}
-))
+export default tools.map(path =>
+  Object.assign({}, config, {
+    entry : './src/' + path + '/index.jsx',
+    dest  : './server/' + path + '/index.js'
+  })
+)
